@@ -519,23 +519,23 @@ const WorkStayPlatform = () => {
             <div className="text-center mb-12">
   <h2 
     className="text-5xl font-extrabold mb-4 tracking-tight"
-    style={{ color: "#5A3A00", fontFamily: "'BMJUA','GmarketSansBold','sans-serif'" }}
+    style={{ color: "#27AE60", fontFamily: "'THE딸기마카롱miri','TmoneyRoundWindExtraBold','Cafe24Ssurround','BMJUA','sans-serif'" }}
   >
     제로 투어
   </h2>
   
   <p 
-    className="text-xl mb-2"
-    style={{ color: "#7A5A00", fontWeight: 600 }}
+    className="text-2xl mb-3"
+    style={{ color: "#363636", fontWeight: 700, fontFamily: "'SUITE-Regular','Pretendard','sans-serif'" }}
   >
-    일하고, 머물고, 추억을 수확하다
+    0원으로 떠나는 가장 값진 여행
   </p>
   
   <p 
     className="text-lg"
-    style={{ color: "#8C6239" }}
+    style={{ color: "#363636", fontWeight: 500 }}
   >
-    열정 하나면, 여행도 일도 가능하다
+    일하고, 머물고, 추억을 수확하다
   </p>
 </div>
 
@@ -639,9 +639,14 @@ const WorkStayPlatform = () => {
                         </div>
 
                         <div className="flex flex-wrap gap-1">
-                          {(exp.benefits || []).slice(0, 2).map((b, idx) => (
-                            <span key={idx} className="chip chip--benefit-brown">{b}</span>
-                          ))}
+                          {(exp.benefits || []).slice(0, 2).map((b, idx) => {
+                            let chipClass = "chip chip--benefit-brown";
+                            if (b === "숙박") chipClass += " chip--accommodation";
+                            if (b === "식사") chipClass += " chip--meal";
+                            return (
+                              <span key={idx} className={chipClass}>{b}</span>
+                            );
+                          })}
                           {(exp.benefits || []).length > 2 && (
                             <span className="text-xs text-gray-500">+{exp.benefits.length - 2}</span>
                           )}

@@ -1,0 +1,64 @@
+/* src/brand.css  — 로고 팔레트 */
+:root{
+    --brand:        #2F86E6;  /* 메인 블루 */
+    --brand-dark:   #1E6FD0;
+    --mint:         #49C5B6;  /* 민트/초록 들판 */
+    --mint-dark:    #2AA999;
+    --sky-50:       #EEF6FF;  /* 배경 하이라이트 */
+    --sky-100:      #E6F1FF;
+    --sun:          #F6D072;  /* 노란 들판 */
+    --ink:          #0E2B4A;
+  }
+  
+  /* 부드러운 그라데이션 배경 */
+  .page-bg{
+    background:
+      radial-gradient(1200px 800px at 90% -10%, rgba(73,197,182,.18), transparent 60%),
+      radial-gradient(1000px 600px at -10% 20%, rgba(47,134,230,.16), transparent 55%),
+      linear-gradient(180deg, var(--sky-50), #fff 60%, var(--sky-100));
+  }
+  
+  /* 글래스 헤더 */
+  .header-glass{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.70);
+    border-bottom: 1px solid rgba(47,134,230,.15);
+  }
+  
+  /* 카드 */
+  .card{
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(16,60,110,.06);
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card--hover:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16,60,110,.12); }
+  
+  /* 버튼 */
+  .btn-primary{
+    background: linear-gradient(135deg, var(--brand) 0%, var(--mint) 100%);
+    color: #fff; border-radius: 12px; padding: .75rem 1rem; font-weight: 700;
+    box-shadow: 0 6px 16px rgba(47,134,230,.25);
+  }
+  .btn-primary:hover{ filter: brightness(1.03); }
+  .btn-outline{
+    border: 2px solid rgba(47,134,230,.35);
+    border-radius: 12px; color: var(--ink); padding: .75rem 1rem; font-weight: 700;
+    background: #fff;
+  }
+  .btn-outline:hover{ background: rgba(238,246,255,.6); }
+  
+  /* 칩(태그/혜택/배지) */
+  .chip{ font-size: 12px; padding: .25rem .5rem; border-radius: 999px; border:1px solid transparent; }
+  .chip--type{ background:#EAF6F4; color:#0F6B62; border-color:#C7EAE5; }
+  .chip--benefit{ background:#EAF3FF; color:#206BBE; border-color:#CFE5FF; }
+  .chip--ai{
+    background:rgba(120,94,255,.08); color:#5E57C8; border-color:rgba(120,94,255,.22);
+  }
+  
+  /* 작은 강조 라벨 */
+  .kicker{ color: var(--brand-dark); font-weight:700; letter-spacing:.02em; }
+  
+  /* 지도 프레임 보더 컬러 */
+  .map-frame{ border: 1px solid rgba(47,134,230,.25) !important; border-radius: 12px; }
+  

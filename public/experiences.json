@@ -1,0 +1,652 @@
+[
+    {
+      "id": 3,
+      "title": "대전 도심 농장 하루 알바",
+      "region": "대전",
+      "duration": "당일",
+      "participants": "2명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["도시농업", "알바", "힐링", "체험"],
+      "benefits": ["교통지원", "지역화폐"],
+      "image": "🌱",
+      "description": "도심 농장에서 하루 동안 잡초제거·수확 보조 등 일손 돕기. 초보 환영! 자차 어려우면 시내버스 정류장까지 픽업 가능. 근무 후 지역화폐로 보상됩니다.",
+      "distance": "40분",
+      "transportSupport": true,
+      "location": "대전광역시 유성구 자운동 22-1",
+      "reviews": [
+        { "author": "민수", "rating": 5, "date": "2025-05-18", "content": "하루 알바로 딱 좋아요. 끝나고 지역화폐로 근처 카페 갔습니다." },
+        { "author": "예린", "rating": 4, "date": "2025-06-02", "content": "일은 단순반복이라 어렵지 않고 픽업도 편했어요." }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "천안 사과 농장 수확 알바",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2-4명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["과수", "수확", "알바", "체험"],
+      "benefits": ["숙박", "식사", "교통지원"],
+      "image": "🍎",
+      "description": "사과 따기·선별·포장 보조 알바. 초심자 환영, 간단한 안전 교육 후 진행. 숙박·식사 제공, 지역화폐로 보상됩니다.",
+      "distance": "1시간",
+      "transportSupport": true,
+      "location": "충청남도 예산군 신양면 신양하천길",
+      "reviews": [
+        { "author": "도형", "rating": 5, "date": "2025-04-27", "content": "사장님 친절! 숙소 깔끔했고 일도 수월했어요." },
+        { "author": "유정", "rating": 4, "date": "2025-07-03", "content": "선별 작업 위주라 편했고 보상도 투명했습니다." }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "청주 딸기 하우스 수확 알바",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "2-3명",
+      "period": "2024.12.01 - 2025.02.28",
+      "type": "기간제",
+      "tags": ["과일", "재배", "알바", "체험"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🍓",
+      "description": "하우스 내 딸기 수확·선별·상자 포장 알바. 초보도 바로 가능하며 방한장비 제공. 근무 후 지역화폐 지급, 간식으로 딸기 빙수 제공.",
+      "distance": "1시간 20분",
+      "transportSupport": true,
+      "location": "충청북도 청원군 가덕면 삼항리 496",
+      "reviews": [
+        { "author": "재민", "rating": 5, "date": "2025-01-14", "content": "따뜻한 하우스라 겨울에도 일하기 좋았어요." },
+        { "author": "서영", "rating": 4, "date": "2025-02-03", "content": "포장 위주라 어렵지 않았고 교통지원이 편했습니다." }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "세종 감자 캐기 반나절 알바",
+      "region": "세종특별자치시",
+      "duration": "반나절",
+      "participants": "1-5명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["감자", "수확", "알바", "아이동반"],
+      "benefits": ["간식제공", "교통지원"],
+      "image": "🥔",
+      "description": "감자 캐기·선별·망담기 보조 알바. 가족 동반 가능(안전구역 분리). 반나절 근무 후 지역화폐 제공, 수확 감자 일부 가져갈 수 있어요.",
+      "distance": "20분",
+      "transportSupport": true,
+      "location": "세종시 전의면 포천리 88",
+      "reviews": [
+        { "author": "연호", "rating": 5, "date": "2025-05-05", "content": "반나절 코스로 부담 없고 아이도 좋아했습니다." },
+        { "author": "하늬", "rating": 4, "date": "2025-06-10", "content": "간식 지원 굿! 마무리 청소까지 도우면 시간 딱 맞아요." }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "공주 밤 줍기 일손돕기",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2-6명",
+      "period": "9월 - 10월",
+      "type": "기간제",
+      "tags": ["밤", "수확", "알바", "힐링"],
+      "benefits": ["숙박", "식사"],
+      "image": "🌰",
+      "description": "밤 줍기·밤송이 분리 등 가을철 수확 알바. 장갑·집게 제공. 숙박 포함, 지역화폐 보상으로 마을 식당·카페 이용 가능.",
+      "distance": "50분",
+      "transportSupport": false,
+      "location": "충남 공주시 사곡면",
+      "reviews": [
+        { "author": "가온", "rating": 5, "date": "2024-10-02", "content": "밤송이 까는 요령 알려주셔서 금방 익숙해졌어요." },
+        { "author": "주연", "rating": 4, "date": "2024-10-08", "content": "숲향기 좋아요. 다만 경사가 있어 운동화 필수." }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "보령 고구마 캐기 알바(머드 체험 연계)",
+      "region": "충청남도",
+      "duration": "2박 3일",
+      "participants": "4-8명",
+      "period": "7월 - 8월",
+      "type": "기간제",
+      "tags": ["고구마", "알바", "축제", "머드"],
+      "benefits": ["숙박", "식사", "교통지원"],
+      "image": "🍠",
+      "description": "고구마 캐기·박스 적재 알바. 단체 지원 환영. 일정 중 머드축제 연계 옵션 제공, 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충남 보령시 대천해수욕장 인근",
+      "reviews": [
+        { "author": "시윤", "rating": 5, "date": "2025-07-20", "content": "팀으로 가면 재밌어요. 머드축제까지 알차게!" },
+        { "author": "다경", "rating": 4, "date": "2025-08-01", "content": "햇빛 강해서 모자 필수. 보상은 바로 정산됨." }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "논산 딸기 수확/가공 알바",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2-4명",
+      "period": "1월 - 3월",
+      "type": "기간제",
+      "tags": ["딸기", "알바", "축제", "체험"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🍓",
+      "description": "딸기 수확·으깨기·잼/디저트 보조 알바. 축제장 운영 보조 포함. 지역화폐 보상, 초보 환영.",
+      "distance": "1시간",
+      "transportSupport": true,
+      "location": "충남 논산시 부적면",
+      "reviews": [
+        { "author": "해린", "rating": 5, "date": "2025-01-18", "content": "축제 분위기라 시간 금방 가요." },
+        { "author": "진수", "rating": 4, "date": "2025-02-10", "content": "가공 라인 보조 재밌었고 사장님 친절." }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "옥천 포도 수확 알바",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "4-5명",
+      "period": "8월 - 9월",
+      "type": "기간제",
+      "tags": ["포도", "과일", "알바", "체험"],
+      "benefits": ["숙박", "식사"],
+      "image": "🍇",
+      "description": "포도 따기·선별·상자 적재 알바. 비 올 땐 비가림하우스에서 작업. 근무 후 지역화폐로 마을 식당 이용 가능.",
+      "distance": "1시간 10분",
+      "transportSupport": false,
+      "location": "충북 옥천군 동이면 포도마을",
+      "reviews": [
+        { "author": "도윤", "rating": 4, "date": "2024-09-05", "content": "상자 들고 이동이 조금 힘들지만 보람 있어요." },
+        { "author": "유림", "rating": 5, "date": "2024-09-07", "content": "숙소 깔끔, 저녁 한상 최고!" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "예산 한우 목장 일손 알바",
+      "region": "충청남도",
+      "duration": "2박 3일",
+      "participants": "4-6명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["목장", "한우", "알바", "체험"],
+      "benefits": ["숙박", "식사", "지역화폐"],
+      "image": "🐄",
+      "description": "사료 주기·축사 청소·송아지 케어 보조 알바. 담당자와 2인 1조로 안전 진행. 지역화폐 보상.",
+      "distance": "1시간 30분",
+      "transportSupport": true,
+      "location": "충남 예산군 덕산면",
+      "reviews": [
+        { "author": "보미", "rating": 5, "date": "2025-03-21", "content": "동물 좋아하면 강추! 작업 동선 잘 짜줘서 편했어요." },
+        { "author": "지우", "rating": 4, "date": "2025-04-02", "content": "아침이 빠른 편, 대신 식사 맛있어요." }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "단양 마늘 수확 알바",
+      "region": "충청북도",
+      "duration": "당일",
+      "participants": "5-6명",
+      "period": "5월 - 6월",
+      "type": "기간제",
+      "tags": ["마늘", "수확", "알바", "체험"],
+      "benefits": ["점심제공", "교통지원"],
+      "image": "🧄",
+      "description": "마늘 캐기·다발 묶기·건조대 적치 보조. 햇볕 대비 모자 제공. 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충북 단양군 대강면",
+      "reviews": [
+        { "author": "수아", "rating": 4, "date": "2025-06-01", "content": "허리 숙이는 일이 많아요. 점심 든든!" },
+        { "author": "태호", "rating": 5, "date": "2025-06-05", "content": "팀워크 좋아서 수월했습니다." }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "괴산 유기농 채소 재배 보조 알바",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "2-5명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["채소", "유기농", "알바", "체험"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🥬",
+      "description": "모종 심기·물주기·수확·선별 보조 알바. 유기농 재배방법 교육 포함, 지역화폐 보상.",
+      "distance": "1시간 40분",
+      "transportSupport": true,
+      "location": "충북 괴산군 불정면",
+      "reviews": [
+        { "author": "라희", "rating": 5, "date": "2025-05-10", "content": "유기농 팁 많이 배웠어요. 공기 너무 좋음." },
+        { "author": "민겸", "rating": 4, "date": "2025-05-12", "content": "물 주는 작업이 많아 시원한 시간대에 진행합니다." }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "세종 허브 농장 포장·관리 알바",
+      "region": "세종특별자치시",
+      "duration": "당일",
+      "participants": "4-5명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["허브", "포장", "알바", "힐링"],
+      "benefits": ["간식제공", "교통지원"],
+      "image": "🌿",
+      "description": "허브 수확·묶음 포장·정리 보조 알바. 실내·그늘 작업 위주, 근무 후 허브차 제공. 지역화폐 보상.",
+      "distance": "30분",
+      "transportSupport": true,
+      "location": "세종시 전동면",
+      "reviews": [
+        { "author": "은지", "rating": 5, "date": "2025-04-09", "content": "향기 덕분에 일하는 내내 힐링했어요." },
+        { "author": "현수", "rating": 4, "date": "2025-04-15", "content": "포장 작업이 깔끔해서 성취감 있습니다." }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "공주 국화밭 정리 알바",
+      "region": "충청남도",
+      "duration": "당일",
+      "participants": "1명",
+      "period": "10월 - 11월",
+      "type": "기간제",
+      "tags": ["국화", "꽃", "알바", "체험"],
+      "benefits": ["간식", "포토존"],
+      "image": "🌼",
+      "description": "국화 지지대 설치·잡초정리·폐기물 분리 등 현장 관리 알바. 사진 찍기 좋은 구역 다수, 지역화폐 보상.",
+      "distance": "1시간",
+      "transportSupport": false,
+      "location": "충남 공주시 계룡면",
+      "reviews": [
+        { "author": "보라", "rating": 5, "date": "2024-11-03", "content": "꽃밭이라 사진 맛집. 일 강도도 무난." },
+        { "author": "도하", "rating": 4, "date": "2024-11-07", "content": "장갑 꼭 챙기세요. 현장팀 친절!" }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "아산 벼 수확 알바(온천 연계)",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2명",
+      "period": "9월 - 10월",
+      "type": "기간제",
+      "tags": ["벼농사", "수확", "알바", "힐링"],
+      "benefits": ["숙박", "온천 할인권"],
+      "image": "🌾",
+      "description": "벼 베기·단 묶기·탈곡 보조 알바. 작업 후 온천 할인권 제공, 지역화폐 보상.",
+      "distance": "1시간 20분",
+      "transportSupport": true,
+      "location": "충남 아산시 음봉면",
+      "reviews": [
+        { "author": "서후", "rating": 5, "date": "2024-10-10", "content": "일 끝나고 온천 최고… 피로 싹." },
+        { "author": "해솔", "rating": 4, "date": "2024-10-12", "content": "장화 제공, 논길 이동 주의." }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "세종 블루베리 수확·가공 알바",
+      "region": "세종특별자치시",
+      "duration": "반나절",
+      "participants": "2명",
+      "period": "6월 - 7월",
+      "type": "기간제",
+      "tags": ["블루베리", "알바", "가공", "체험"],
+      "benefits": ["블루베리 주스 제공"],
+      "image": "🫐",
+      "description": "블루베리 따기·세척·패킹 보조 알바. 짧은 시간 집중 근무, 음료 제공·지역화폐 보상.",
+      "distance": "25분",
+      "transportSupport": false,
+      "location": "세종시 연서면",
+      "reviews": [
+        { "author": "다온", "rating": 5, "date": "2025-06-22", "content": "반나절이라 부담 없고 달콤한 보상(?)도 있네요." },
+        { "author": "윤하", "rating": 4, "date": "2025-07-01", "content": "패킹 속도 맞추면 재밌습니다." }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "청양 고추 수확·장 담그기 보조",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "1-2명",
+      "period": "8월 - 9월",
+      "type": "기간제",
+      "tags": ["고추", "전통", "알바", "체험"],
+      "benefits": ["숙박", "식사"],
+      "image": "🌶️",
+      "description": "고추 따기·건조대 정리·전통 고추장 담그기 보조. 전통식 체험 포함, 지역화폐 보상.",
+      "distance": "1시간 40분",
+      "transportSupport": true,
+      "location": "충남 청양군 대치면",
+      "reviews": [
+        { "author": "승우", "rating": 5, "date": "2024-08-28", "content": "매운 향기 가득! 전통 체험이 특히 유익." },
+        { "author": "로아", "rating": 4, "date": "2024-09-01", "content": "건조대 정리가 은근 운동됩니다." }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "서천 갯벌 일손 알바(체험형)",
+      "region": "충청남도",
+      "duration": "당일",
+      "participants": "6-10명",
+      "period": "5월 - 8월",
+      "type": "기간제",
+      "tags": ["갯벌", "바다", "알바", "체험"],
+      "benefits": ["장화 대여", "교통지원"],
+      "image": "🦀",
+      "description": "갯벌 안전교육 후 조개·게 채집 구역 관리·정리 보조. 채집 체험 참여 가능, 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충남 서천군 장항읍",
+      "reviews": [
+        { "author": "재하", "rating": 5, "date": "2025-07-12", "content": "바다 좋아하면 최고. 장화 제공돼 편해요." },
+        { "author": "나연", "rating": 4, "date": "2025-07-18", "content": "썰물 시간 맞춰서 움직여요. 재밌었습니다." }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "제천 약초 채취·가공 보조 알바",
+      "region": "충청북도",
+      "duration": "2박 3일",
+      "participants": "3-8명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["약초", "건강", "알바", "체험"],
+      "benefits": ["숙박", "식사", "교통지원"],
+      "image": "🌱",
+      "description": "산지 약초 채취 동행·세척·건조실 정리 알바. 건강식 체험 포함, 지역화폐 보상.",
+      "distance": "2시간 10분",
+      "transportSupport": true,
+      "location": "충북 제천시 송학면",
+      "reviews": [
+        { "author": "주하", "rating": 5, "date": "2025-05-30", "content": "공기도 좋고 작업 동선 체계적이라 편했어요." },
+        { "author": "나율", "rating": 4, "date": "2025-06-03", "content": "건조실 온도가 높아 수분 보충 필수!" }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "단양 표고버섯 재배 보조 + 동굴 탐방",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "4-5명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["버섯", "재배", "알바", "동굴"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🍄",
+      "description": "배지 분무·수확·선별 포장 보조 알바. 일정 중 석회동굴 탐방 가능. 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충북 단양군 적성면",
+      "reviews": [
+        { "author": "하린", "rating": 5, "date": "2025-03-12", "content": "실내 작업 위주라 날씨 영향 적어요." },
+        { "author": "지안", "rating": 4, "date": "2025-03-15", "content": "동굴 코스 재밌고 사장님 안내 좋아요." }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "옥천 전통 두부 만들기 보조 알바",
+      "region": "충청북도",
+      "duration": "반나절",
+      "participants": "2-6명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["두부", "전통음식", "알바", "체험"],
+      "benefits": ["간식", "식사"],
+      "image": "🍲",
+      "description": "콩 삶기·압착·성형 보조 알바. 위생교육 후 진행, 갓 만든 두부 시식 포함. 지역화폐 보상.",
+      "distance": "1시간 30분",
+      "transportSupport": false,
+      "location": "충북 옥천군 안내면",
+      "reviews": [
+        { "author": "규현", "rating": 5, "date": "2025-04-03", "content": "손맛이 느껴져요. 식사 정말 맛있습니다." },
+        { "author": "세린", "rating": 4, "date": "2025-04-06", "content": "뜨거운 공정 있어 장갑 꼭!" }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "세종 전통주 양조 보조 알바",
+      "region": "세종특별자치시",
+      "duration": "당일",
+      "participants": "4-6명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["전통주", "발효", "알바", "체험"],
+      "benefits": ["시음", "교통지원"],
+      "image": "🍶",
+      "description": "쌀 세척·누룩 혼합·용기 세척 등 양조 보조 알바. 성인만 참여 가능, 본인 제작 막걸리 소량 제공. 지역화폐 보상.",
+      "distance": "25분",
+      "transportSupport": true,
+      "location": "세종시 장군면",
+      "reviews": [
+        { "author": "지후", "rating": 5, "date": "2025-05-02", "content": "발효 과정 배우는 재미가 쏠쏠." },
+        { "author": "하연", "rating": 4, "date": "2025-05-04", "content": "위생관리 철저, 보호장구 제공." }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "괴산 산골 캠핑장 운영 보조 + 옥수수 수확",
+      "region": "충청북도",
+      "duration": "2박 3일",
+      "participants": "2-6명",
+      "period": "7월 - 8월",
+      "type": "기간제",
+      "tags": ["옥수수", "캠핑", "알바", "체험"],
+      "benefits": ["숙박", "식사"],
+      "image": "🌽",
+      "description": "캠핑장 체크인 안내·정리·옥수수 수확 보조 알바. 밤에는 모닥불 프로그램 지원. 지역화폐 보상.",
+      "distance": "1시간 50분",
+      "transportSupport": false,
+      "location": "충북 괴산군 칠성면",
+      "reviews": [
+        { "author": "민아", "rating": 5, "date": "2025-07-25", "content": "자연 속에서 일하고 쉬고 둘 다 만족!" },
+        { "author": "윤성", "rating": 4, "date": "2025-07-28", "content": "체크인 시간대가 살짝 바쁩니다." }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "보은 사과 따기·즙 가공 보조",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "2-5명",
+      "period": "9월 - 11월",
+      "type": "기간제",
+      "tags": ["사과", "수확", "알바", "체험"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🍎",
+      "description": "사과 수확·선별·즙 가공 라인 보조 알바. 초보 환영, 지역화폐 보상.",
+      "distance": "1시간 40분",
+      "transportSupport": true,
+      "location": "충북 보은군 삼승면",
+      "reviews": [
+        { "author": "다빈", "rating": 5, "date": "2024-10-03", "content": "가공 라인 속도만 맞추면 쉬워요." },
+        { "author": "태린", "rating": 4, "date": "2024-10-05", "content": "바쁜 시간대 있지만 팀장님 리드 굿." }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "세종 전동마을 벼농사 일손 알바",
+      "region": "세종특별자치시",
+      "duration": "당일",
+      "participants": "6-8명",
+      "period": "5월 - 10월",
+      "type": "기간제",
+      "tags": ["벼농사", "알바", "농촌", "힐링"],
+      "benefits": ["간식", "교통지원"],
+      "image": "🌾",
+      "description": "모내기·제초·수확 보조 알바. 전통 농기구 사용법 안전교육 제공. 지역화폐 보상.",
+      "distance": "15분",
+      "transportSupport": true,
+      "location": "세종시 전동면",
+      "reviews": [
+        { "author": "은후", "rating": 5, "date": "2025-05-22", "content": "일 배우는 맛이 있어요. 간식 넉넉." },
+        { "author": "성우", "rating": 4, "date": "2025-06-01", "content": "장화/모자 준비하면 완벽." }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "청주 전통장 담그기 보조 알바",
+      "region": "충청북도",
+      "duration": "반나절",
+      "participants": "2-5명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["된장", "간장", "발효", "알바"],
+      "benefits": ["시식", "교통지원"],
+      "image": "🥢",
+      "description": "메주 손질·항아리 세척·소금물 배합 보조. 발효 관리 교육 포함, 지역화폐 보상.",
+      "distance": "1시간 10분",
+      "transportSupport": true,
+      "location": "충북 청주시 흥덕구",
+      "reviews": [
+        { "author": "재이", "rating": 5, "date": "2025-03-08", "content": "전통 방식 직접 보니 신기했어요." },
+        { "author": "준영", "rating": 4, "date": "2025-03-10", "content": "세척 작업 위주, 장갑 필수." }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "홍성 해삼 채취 지원 알바",
+      "region": "충청남도",
+      "duration": "당일",
+      "participants": "3-6명",
+      "period": "3월 - 5월",
+      "type": "기간제",
+      "tags": ["해산물", "바다", "알바", "체험"],
+      "benefits": ["장비제공", "교통지원"],
+      "image": "🌊",
+      "description": "안전관리자 동행 하에 채취·분류·세척 보조 알바. 방수장비 제공, 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충남 홍성군 남당항",
+      "reviews": [
+        { "author": "다함", "rating": 5, "date": "2025-04-14", "content": "바다 향기 가득, 장비 지원 좋아요." },
+        { "author": "유진", "rating": 4, "date": "2025-04-18", "content": "물때 맞춰 움직여서 새벽 출발 가능." }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "제천 사과 와인 양조 보조 알바",
+      "region": "충청북도",
+      "duration": "1박 2일",
+      "participants": "2-4명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["와인", "사과", "발효", "알바"],
+      "benefits": ["숙박", "시음"],
+      "image": "🍷",
+      "description": "발효 탱크 관리·병입 보조·라벨 부착 등 양조 보조 알바. 성인만 참여, 지역화폐 보상.",
+      "distance": "2시간",
+      "transportSupport": false,
+      "location": "충북 제천시 봉양읍",
+      "reviews": [
+        { "author": "윤재", "rating": 5, "date": "2025-02-22", "content": "병입 라벨링 재밌어요. 숙소 깔끔." },
+        { "author": "혜린", "rating": 4, "date": "2025-03-01", "content": "발효 향 좋아요. 세척 공정은 꼼꼼함 필요." }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "세종 토마토 하우스 수확 알바",
+      "region": "세종특별자치시",
+      "duration": "반나절",
+      "participants": "2-6명",
+      "period": "3월 - 6월",
+      "type": "기간제",
+      "tags": ["토마토", "재배", "알바", "체험"],
+      "benefits": ["토마토 시식"],
+      "image": "🍅",
+      "description": "토마토 수확·줄 유인 보조·선별 포장 알바. 반나절 근무, 지역화폐 보상.",
+      "distance": "20분",
+      "transportSupport": false,
+      "location": "세종시 부강면",
+      "reviews": [
+        { "author": "가빈", "rating": 5, "date": "2025-04-20", "content": "하우스라 비와도 작업 가능. 맛난 시식!" },
+        { "author": "도연", "rating": 4, "date": "2025-04-25", "content": "유인 작업은 손재주 필요하지만 금방 익숙." }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "보령 바다낚시 배 승선 보조 알바",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2-8명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["낚시", "어촌", "알바", "체험"],
+      "benefits": ["숙박", "교통지원"],
+      "image": "🎣",
+      "description": "선상 장비 정리·안전 안내·어획물 분류 보조 알바. 멀미 심한 분 비추천. 지역화폐로 보상합니다.",
+      "distance": "2시간",
+      "transportSupport": true,
+      "location": "충남 보령시 오천면",
+      "reviews": [
+        { "author": "정후", "rating": 4, "date": "2025-05-16", "content": "멀미약 꼭! 일 자체는 루틴해서 금방 적응." },
+        { "author": "현지", "rating": 5, "date": "2025-05-18", "content": "어촌 분위기 최고, 보상도 즉시." }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "천안 포도 와이너리 보조 알바",
+      "region": "충청남도",
+      "duration": "1박 2일",
+      "participants": "2-4명",
+      "period": "상시모집",
+      "type": "상시",
+      "tags": ["포도", "와인", "알바", "체험"],
+      "benefits": ["숙박", "와인 시음"],
+      "image": "🍇",
+      "description": "포도밭 관리·수확 보조 및 와이너리 간단한 병입/정리 알바. 성인만 참여 가능, 지역화폐 보상.",
+      "distance": "1시간 10분",
+      "transportSupport": true,
+      "location": "충남 천안시 성환읍",
+      "reviews": [
+        { "author": "유리", "rating": 5, "date": "2025-06-06", "content": "와이너리 투어까지 알차요." },
+        { "author": "정민", "rating": 4, "date": "2025-06-08", "content": "포도밭 햇빛 강해 모자 필수." }
+      ]
+    } ,
+
+        {
+          "id": 32,
+          "title": "세종 고운동 채소 선별·포장 알바",
+          "region": "세종특별자치시",
+          "duration": "반나절",
+          "participants": "2-3명",
+          "period": "상시모집",
+          "type": "상시",
+          "tags": ["채소", "선별", "도시농업", "힐링"],
+          "benefits": ["간식제공", "지역화폐", "교통지원"],
+          "image": "🥕",
+          "description": "세종 농산물 유통센터 협력 텃밭에서 수확물 세척·선별·소분 포장 보조. 초보 환영, 실내/그늘 작업 위주라 날씨 영향 적음. 근무 후 지역화폐로 정산되어 인근 카페/식당에서 바로 사용 가능.",
+          "distance": "15분",
+          "transportSupport": false,
+          "location": "세종특별자치시 고운동 123-4, 농산물유통센터 뒤편 텃밭동",
+          "reviews": [
+            { "author": "다은", "rating": 5, "date": "2025-05-03", "content": "반나절이라 부담 없고, 작업 동선이 깔끔해서 손에 금방 익어요." },
+            { "author": "지민", "rating": 5, "date": "2025-05-19", "content": "관리자님 친절+피드백 잘해주심. 지역화폐로 끝나고 바로 브런치 먹었어요!" },
+            { "author": "윤호", "rating": 5, "date": "2025-06-08", "content": "세척→소분→라벨 순서만 익히면 루틴해서 편합니다." },
+            { "author": "은채", "rating": 5, "date": "2025-06-29", "content": "실내 비중이 높아 여름에도 괜찮았어요. 장갑/앞치마 제공 굿." },
+            { "author": "현욱", "rating": 5, "date": "2025-07-07", "content": "대중교통 역 픽업해주셔서 접근성 최고." },
+            { "author": "하율", "rating": 4, "date": "2025-07-20", "content": "라벨링이 은근 집중 필요. 그래도 전반적으로 편하고 보상 깔끔." }
+          ]
+        },
+        {
+          "id": 33,
+          "title": "공주 반포면 과수 상자 접기·선별 보조",
+          "region": "충청남도",
+          "duration": "당일",
+          "participants": "2-3명",
+          "period": "9월 - 11월",
+          "type": "기간제",
+          "tags": ["과수", "선별", "알바", "힐링"],
+          "benefits": ["점심제공", "지역화폐"],
+          "image": "🍎",
+          "description": "사과/배 상자 접기, 완충재 세팅, 선별 라인 보조. 반복 작업 위주라 금방 익숙해짐. 마을 식당·카페에서 쓸 수 있는 지역화폐로 정산.",
+          "distance": "55분",
+          "transportSupport": false,
+          "location": "충청남도 공주시 반포면 학봉리 212-3, ○○과수 선별장",
+          "reviews": [
+            { "author": "지안", "rating": 4, "date": "2024-10-01", "content": "반복 작업이지만 팀원들이 도와줘서 수월. 점심 든든합니다." },
+            { "author": "태윤", "rating": 5, "date": "2024-10-06", "content": "다른 곳들과 다르게 단순 반복 작업이라, 손재주 없는 사람들도 쉽게 할 수 있습니다!" },
+            { "author": "서아", "rating": 4, "date": "2024-10-12", "content": "현장 깔끔하게 관리되고 보상 정산 빠름." },
+            { "author": "주원", "rating": 4, "date": "2024-10-20", "content": "시골 풍경 힐링 포인트 👍 다만 먼지 조금 있음." }
+          ]
+        }
+      ]
+      
+
+  

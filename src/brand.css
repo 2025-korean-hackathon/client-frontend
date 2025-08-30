@@ -1,10 +1,10 @@
 /* src/brand.css — Warm Green-Yellow Theme */
 :root{
   /* Brand tokens (warm, friendly) */
-  --leaf:        #52C41A;  /* 연두 메인 */
-  --leaf-dark:   #3AA30E;
-  --field:       #FADB14;  /* 들판 노랑 */
-  --field-dark:  #E7B800;
+  --leaf:        #7A5A00;  /* 연두 메인 */
+  --leaf-dark:   #7A5A00;
+  --field:       #f4c55c;  /* 들판 노랑 */
+  --field-dark:  #f4c55c;
   --cream-50:    #FFFBEA;  /* 따뜻한 배경 하이라이트 */
   --cream-100:   #FFF6D5;
   --sage-50:     #F2FBEF;  /* 연두빛 배경 하이라이트 */
@@ -18,7 +18,7 @@
 
   /* Chat / badges */
   --chip-green-bg:  #EEF9E8;
-  --chip-green-fg:  #1B7D12;
+  --chip-green-fg:  #7A5A00;
   --chip-green-br:  #CDEFC4;
   --chip-yellow-bg: #FFFAE6;
   --chip-yellow-fg: #7A5A00;
@@ -28,22 +28,24 @@
   --chip-ai-br:     rgba(160,120,0,.22);
 }
 
-/* 부드러운 그라데이션 배경 (연두 ↔ 크림) */
+/* 단색 배경 */
 .page-bg{
-  background:
-    radial-gradient(800px 600px at 10% 20%, rgba(250,219,20,.25), transparent 60%),
-    radial-gradient(1000px 700px at 90% 80%, rgba(82,196,26,.25), transparent 65%),
-    linear-gradient(90deg, #D6F6A1 0%, #D6F6A1 50%, #D6F6A1 100%);
+  background: #f4c55c; /* field color */
 }
 
-/* 글래스 헤더 (따뜻한 톤) */
+/* 글래스 헤더 */
 .header-glass{
   backdrop-filter: blur(10px);
-  background: 
-    radial-gradient(800px 600px at 10% 20%, rgba(250,219,20,.25), transparent 60%),
-    radial-gradient(1000px 700px at 90% 80%, rgba(82,196,26,.25), transparent 65%),
-    linear-gradient(90deg, #FFF4B3 0%, #E8FFB5 50%, #D6F6A1 100%);
-  border-bottom: 1px solid var(--border);
+  background: #f4c55c;
+}
+
+
+.header-glass .brand-text {
+  font-family: 'BMJUA','GmarketSansBold','Pretendard','sans-serif';
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #5A3A00; /* 다크 브라운 */
+  letter-spacing: .02em;
 }
 
 /* 카드 */
@@ -60,13 +62,14 @@
 
 /* 버튼 */
 .btn-primary{
-  background: linear-gradient(135deg, var(--leaf) 0%, var(--field) 100%);
+  background: var(--leaf);
   color: #fff;
   border-radius: 12px; padding: .75rem 1rem; font-weight: 700;
   box-shadow: 0 6px 16px rgba(250,219,20,.25);
   border: none;
 }
 .btn-primary:hover{ filter: brightness(1.04); }
+
 .btn-outline{
   border: 2px solid var(--border);
   border-radius: 12px; color: var(--ink); padding: .75rem 1rem; font-weight: 700;
@@ -88,7 +91,7 @@
 
 /* 유저/봇 말풍선 */
 .bubble-user{
-  background: linear-gradient(135deg, var(--leaf) 0%, var(--field) 100%);
+  background: var(--leaf);
   color: #fff;
 }
 .bubble-bot{
@@ -109,7 +112,7 @@
   --clay-200: rgba(160,120,60,.18);
 }
 
-/* 공통 카드 스킨: 은은한 그라데이션 + 보더 컬러 */
+/* 공통 카드 스킨 */
 .card-skin{
   border: 1px solid transparent;
   position: relative;
@@ -119,35 +122,33 @@
   content:"";
   position:absolute; inset:-8% -8% auto auto;
   width:200px; height:200px; border-radius:50%;
-  background: radial-gradient(120px 120px at 70% 30%, rgba(255,255,255,.7), transparent 60%),
-              radial-gradient(100px 100px at 10% 90%, rgba(255,255,255,.35), transparent 60%);
+  background: rgba(255,255,255,.25);
   pointer-events:none;
-  filter: blur(.5px);
 }
 
-/* 과일/체험 성격에 따른 스킨 */
+/* 단색 카드 스킨 */
 .skin-peach{
-  background: linear-gradient(180deg, var(--peach-50), #fff 65%);
+  background: var(--peach-50);
   border-color: rgba(255, 166, 97, .32);
   box-shadow: 0 3px 10px rgba(255, 166, 97, .14);
 }
 .skin-butter{
-  background: linear-gradient(180deg, var(--butter-50), #fff 65%);
+  background: var(--butter-50);
   border-color: rgba(255, 209, 85, .30);
   box-shadow: 0 3px 10px rgba(255, 209, 85, .12);
 }
 .skin-pear{
-  background: linear-gradient(180deg, var(--pear-50), #fff 65%);
+  background: var(--pear-50);
   border-color: rgba(153, 199, 89, .28);
   box-shadow: 0 3px 10px rgba(153, 199, 89, .12);
 }
 .skin-rose{
-  background: linear-gradient(180deg, var(--rose-50), #fff 65%);
+  background: var(--rose-50);
   border-color: rgba(240, 120, 120, .24);
   box-shadow: 0 3px 10px rgba(240, 120, 120, .10);
 }
 
-/* 호버시 살짝 들어올리는 느낌 유지 */
+/* 호버 */
 .card-skin.card--hover:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(16,60,110,.10), 0 6px 14px var(--clay-200);
@@ -161,6 +162,6 @@
 /* 혜택칩 연갈색 */
 .chip--benefit-brown {
   background: #B87333;   /* 따뜻한 구리색 계열 */
-  color: #fff;           /* 폰트는 흰색 */
+  color: #fff;           
   border: 1px solid #9c5f28;
 }

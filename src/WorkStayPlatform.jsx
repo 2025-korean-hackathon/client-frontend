@@ -512,15 +512,33 @@ const WorkStayPlatform = () => {
               <img 
                 src="/logo/logo.png" 
                 alt="제로 투어 로고" 
-                className="w-32 h-32 object-contain mx-auto"
+                className="w-80 h-100 object-contain mx-auto"
               />
             </div>
 
             <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold text-gray-800 mb-4">제로 투어</h2>
-              <p className="text-xl text-gray-600 mb-2">일하고, 머물고, 추억을 수확하다</p>
-              <p className="text-lg text-gray-500">열정 하나면, 여행도 일도 가능하다</p>
-            </div>
+  <h2 
+    className="text-5xl font-extrabold mb-4 tracking-tight"
+    style={{ color: "#5A3A00", fontFamily: "'BMJUA','GmarketSansBold','sans-serif'" }}
+  >
+    제로 투어
+  </h2>
+  
+  <p 
+    className="text-xl mb-2"
+    style={{ color: "#7A5A00", fontWeight: 600 }}
+  >
+    일하고, 머물고, 추억을 수확하다
+  </p>
+  
+  <p 
+    className="text-lg"
+    style={{ color: "#8C6239" }}
+  >
+    열정 하나면, 여행도 일도 가능하다
+  </p>
+</div>
+
 
             <div className="card p-8 max-w-md w-full">
               <div className="space-y-4">

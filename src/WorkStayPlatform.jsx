@@ -260,141 +260,122 @@ const WorkStayPlatform = () => {
       let result = start; // ← 모든 분기에서 여기에 대입
 
       // 👇 [신규 하드코딩 케이스] 군입대 전 전국 과일농장 투어 (부산 → 논산)
-      if (
-        hasAny(n, ['군입대전', '군입대']) &&
-        hasAny(n, ['전국투어', '전국', '투어']) &&
-        n.includes('부산') &&
-        n.includes('논산') &&
-        hasAny(n, ['과일농장', '과일', '농장'])
-      ) {
-        console.debug('[HARD-CODED ROUTE] 부산→논산 과일농장 투어 매칭됨:', { raw });
+      // 👇 [신규 하드코딩 케이스] 군입대 전 전국 과일농장 투어 (부산 → 논산)
+    if (
+      hasAny(n, ['군입대전', '군입대']) &&
+      hasAny(n, ['전국투어', '전국', '투어']) &&
+      n.includes('부산') &&
+      n.includes('논산') &&
+      hasAny(n, ['과일농장', '과일', '농장'])
+    ) {
+      console.debug('[HARD-CODED ROUTE] 부산→논산 과일농장 투어 매칭됨:', { raw });
 
-        // 1) 시연용 데모 Experience 4개 정의 (필요시 여기서만 주입)
-        const demoExperiences = [
-          {
-            id: 9001,
-            title: '대구 복숭아 농장 일손돕기',
-            region: '대구',
-            duration: '당일',
-            participants: '2-4명',
-            period: '7~9월 (주말 위주)',
-            type: '기간제',
-            tags: ['과일', '수확', '체험', '힐링'],
-            benefits: ['간식제공', '교통지원'],
-            image: '🍑',
-            description: '달콤한 복숭아 수확 보조. 초보 가능, 사진 스팟 많아요!',
-            distance: '1시간 10분',
-            transportSupport: true,
-            location: '대구광역시 달성군 논공읍 복숭아길 77',
-            reviews: [
-              { author: '지후', rating: 5, date: '2025-07-12', content: '복숭아 향이 미쳤습니다. 사진맛집!' },
-            ],
-          },
-          {
-            id: 9002,
-            title: '경북 영천 포도밭 체험',
-            region: '경북 영천',
-            duration: '반일',
-            participants: '2-6명',
-            period: '8~10월',
-            type: '기간제',
-            tags: ['과일', '수확', '체험'],
-            benefits: ['포도시식', '지역화폐'],
-            image: '🍇',
-            description: '머루·캠벨 포도 수확 및 포장 보조. 그늘 많아 한여름에도 덜 덥습니다.',
-            distance: '1시간 40분',
-            transportSupport: false,
-            location: '경상북도 영천시 금호읍 포도길 21',
-            reviews: [
-              { author: '나연', rating: 4, date: '2025-08-03', content: '포도 진짜 달아요. 아이랑 같이 와도 좋을 듯!' },
-            ],
-          },
-          {
-            id: 9003,
-            title: '전북 익산 배 농장 체험',
-            region: '전북 익산',
-            duration: '당일',
-            participants: '3-5명',
-            period: '9~11월',
-            type: '기간제',
-            tags: ['과일', '수확', '체험'],
-            benefits: ['중식제공'],
-            image: '🍐',
-            description: '배 봉지 씌우기·수확 보조. 숙련도 필요 없음, 팀 활동 위주.',
-            distance: '2시간 10분',
-            transportSupport: false,
-            location: '전라북도 익산시 함열읍 배밭로 12-3',
-            reviews: [
-              { author: '준호', rating: 5, date: '2025-09-01', content: '팀으로 하니 금방 끝나고 재밌었어요.' },
-            ],
-          },
-          {
-            id: 9004,
-            title: '충남 공주 밤밭 함께해요',
-            region: '충남 공주',
-            duration: '당일',
-            participants: '2-3명',
-            period: '9~11월',
-            type: '기간제',
-            tags: ['과일', '수확', '체험', '힐링'],
-            benefits: ['교통지원'],
-            image: '🌰',
-            description: '밤 줍기·선별 보조. 숲길 산책 가능, 힐링 코스 강추.',
-            distance: '1시간 50분',
-            transportSupport: true,
-            location: '충청남도 공주시 탄천면 밤밭길 5',
-            reviews: [
-              { author: '현수', rating: 4, date: '2025-10-05', content: '공기 너무 좋고 밤도 실했어요.' },
-            ],
-          },
-        ];
+      // 1) 시연용 데모 Experience 4개만 사용 (기존 목록과 병합 X)
+      const demoExperiences = [
+        {
+          id: 9001,
+          title: '대구 복숭아 농장 일손돕기',
+          region: '대구',
+          duration: '당일',
+          participants: '2-4명',
+          period: '7~9월 (주말 위주)',
+          type: '기간제',
+          tags: ['과일', '수확', '체험', '힐링'],
+          benefits: ['간식제공', '교통지원'],
+          image: '🍑',
+          description: '달콤한 복숭아 수확 보조. 초보 가능, 사진 스팟 많아요!',
+          distance: '1시간 10분',
+          transportSupport: true,
+          location: '대구광역시 달성군 논공읍 복숭아길 77',
+          reviews: [
+            { author: '지후', rating: 5, date: '2025-07-12', content: '복숭아 향이 미쳤습니다. 사진맛집!' },
+          ],
+        },
+        {
+          id: 9002,
+          title: '경북 영천 포도밭 체험',
+          region: '경북 영천',
+          duration: '반일',
+          participants: '2-6명',
+          period: '8~10월',
+          type: '기간제',
+          tags: ['과일', '수확', '체험'],
+          benefits: ['포도시식', '지역화폐'],
+          image: '🍇',
+          description: '머루·캠벨 포도 수확 및 포장 보조. 그늘 많아 한여름에도 덜 덥습니다.',
+          distance: '1시간 40분',
+          transportSupport: false,
+          location: '경상북도 영천시 금호읍 포도길 21',
+          reviews: [
+            { author: '나연', rating: 4, date: '2025-08-03', content: '포도 진짜 달아요. 아이랑 같이 와도 좋을 듯!' },
+          ],
+        },
+        {
+          id: 9003,
+          title: '전북 익산 배 농장 체험',
+          region: '전북 익산',
+          duration: '당일',
+          participants: '3-5명',
+          period: '9~11월',
+          type: '기간제',
+          tags: ['과일', '수확', '체험'],
+          benefits: ['중식제공'],
+          image: '🍐',
+          description: '배 봉지 씌우기·수확 보조. 숙련도 필요 없음, 팀 활동 위주.',
+          distance: '2시간 10분',
+          transportSupport: false,
+          location: '전라북도 익산시 함열읍 배밭로 12-3',
+          reviews: [
+            { author: '준호', rating: 5, date: '2025-09-01', content: '팀으로 하니 금방 끝나고 재밌었어요.' },
+          ],
+        },
+        {
+          id: 9004,
+          title: '충남 공주 밤밭 함께해요',
+          region: '충남 공주',
+          duration: '당일',
+          participants: '2-3명',
+          period: '9~11월',
+          type: '기간제',
+          tags: ['과일', '수확', '체험', '힐링'],
+          benefits: ['교통지원'],
+          image: '🌰',
+          description: '밤 줍기·선별 보조. 숲길 산책 가능, 힐링 코스 강추.',
+          distance: '1시간 50분',
+          transportSupport: true,
+          location: '충청남도 공주시 탄천면 밤밭길 5',
+          reviews: [
+            { author: '현수', rating: 4, date: '2025-10-05', content: '공기 너무 좋고 밤도 실했어요.' },
+          ],
+        },
+      ];
 
-        // 2) 현재 목록에 같은 제목이 있으면 중복 주입 방지
-        const titleSet = new Set(start.map(e => e.title));
-        const merged = [
-          ...start,
-          ...demoExperiences.filter(d => !titleSet.has(d.title)),
-        ];
+      // 2) 과일 체험만(안전) 필터링 후, 고정 경로 순서로 정렬
+      const ONLY = demoExperiences.filter(isFruitPicking);
+      const ROUTE_ORDER = [9001, 9002, 9003, 9004];
+      const result = [...ONLY].sort(
+        (a, b) => ROUTE_ORDER.indexOf(a.id) - ROUTE_ORDER.indexOf(b.id)
+      );
 
-        // 3) 과일 수확/따기 체험만 필터링
-        let resultLocal = merged.filter(isFruitPicking);
-
-        // 4) 시연용 고정 경로 순서로 정렬 (대구 → 영천 → 익산 → 공주)
-        const ROUTE_ORDER = ['대구', '영천', '익산', '공주'];
-        const regionKey = (exp) => {
-          const r = `${exp.region || ''} ${exp.location || ''}`;
-          if (r.includes('대구')) return '대구';
-          if (r.includes('영천')) return '영천';
-          if (r.includes('익산')) return '익산';
-          if (r.includes('공주')) return '공주';
-          return null; // 기타는 뒤로
-        };
-        const indexOfRegion = (exp) => {
-          const key = regionKey(exp);
-          const idx = ROUTE_ORDER.indexOf(key ?? '');
-          return idx === -1 ? Number.POSITIVE_INFINITY : idx;
-        };
-
-        resultLocal = [...resultLocal].sort((a, b) => {
-          const ia = indexOfRegion(a);
-          const ib = indexOfRegion(b);
-          if (ia === ib) return 0;
-          return ia - ib;
-        });
-
-        // 화면/상태 반영 + 응답
-        setBaseList(resultLocal);
-        setFilteredExperiences(applyFilters(resultLocal));
+      // 10초 딜레이 후 실행
+      setTimeout(() => {
+        setBaseList(result);
+        setSelectedRegion('전체');
+        setSelectedTag('전체');
+        setFilteredExperiences(result);
         setResultSource('chat');
 
-        const botResponseLocal =
+        const botResponse =
           '추천 경로를 안내드릴게요!\n' +
           '부산 출발 → 대구 복숭아 농장 → 경북 영천 포도밭 → 전북 익산 배 농장 → 충남 공주 밤밭 → 논산 도착!!\n' +
           '전국을 돌며 과일농장 체험도 하고, 여행의 추억도 쌓으실 수 있습니다.';
 
-        setChatMessages(prev => [...prev, { type: 'bot', content: botResponseLocal }]);
-        return; // ✅ 아래 다른 분기로 내려가지 않도록 조기 종료
-      }
+        setChatMessages(prev => [...prev, { type: 'bot', content: botResponse }]);
+      }, 10000); // ⏳ 10초 대기
+
+      return; // ✅ 다른 분기로 내려가지 않음
+    }
+
       else if (msg.includes('세종') && (msg.includes('1시간') || msg.includes('30분'))) {
         result = start
           .filter(exp => parseDistanceToMinutes(exp.distance) <= 90)
@@ -620,7 +601,7 @@ const WorkStayPlatform = () => {
 
                       <div className="space-y-3">
                         <div className="flex items-start justify-between">
-                          <h3 className="text-sm font-semibold text-gray-800 truncate flex-1">{exp.title}</h3>
+                          <h3 className="text-sm font-semibold text-title-strong truncate flex-1">{exp.title}</h3>
                           <span className="chip chip--type text-xs font-medium whitespace-nowrap ml-2">
                             {exp.type}
                           </span>
@@ -641,7 +622,7 @@ const WorkStayPlatform = () => {
 
                         <div className="flex flex-wrap gap-1">
                           {(exp.benefits || []).slice(0, 2).map((b, idx) => (
-                            <span key={idx} className="chip chip--benefit">{b}</span>
+                            <span key={idx} className="chip chip--benefit-brown">{b}</span>
                           ))}
                           {(exp.benefits || []).length > 2 && (
                             <span className="text-xs text-gray-500">+{exp.benefits.length - 2}</span>

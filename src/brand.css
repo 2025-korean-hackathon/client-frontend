@@ -33,7 +33,7 @@
   background:
     radial-gradient(800px 600px at 10% 20%, rgba(250,219,20,.25), transparent 60%),
     radial-gradient(1000px 700px at 90% 80%, rgba(82,196,26,.25), transparent 65%),
-    linear-gradient(90deg, #FFF4B3 0%, #E8FFB5 50%, #D6F6A1 100%);
+    linear-gradient(90deg, #D6F6A1 0%, #D6F6A1 50%, #D6F6A1 100%);
 }
 
 /* 글래스 헤더 (따뜻한 톤) */
@@ -151,4 +151,16 @@
 .card-skin.card--hover:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(16,60,110,.10), 0 6px 14px var(--clay-200);
+}
+
+/* 타이틀용 진한 색 */
+.text-title-strong {
+  color: #5A3A00;  /* 다크 브라운 */
+}
+
+/* 혜택칩 연갈색 */
+.chip--benefit-brown {
+  background: #B87333;   /* 따뜻한 구리색 계열 */
+  color: #fff;           /* 폰트는 흰색 */
+  border: 1px solid #9c5f28;
 }

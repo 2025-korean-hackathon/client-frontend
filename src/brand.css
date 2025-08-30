@@ -93,6 +93,13 @@
 .chip--benefit{ background: var(--chip-orange-bg); color: var(--chip-orange-fg); border-color: var(--chip-orange-br); }
 .chip--ai{ background: var(--chip-ai-bg); color: var(--chip-ai-fg); border-color: var(--chip-ai-br); }
 
+/* 기간제 전용 초록색 태그 */
+.chip--period {
+  background: #27AE60 !important;
+  color: #ffffff !important;
+  border-color: #27AE60 !important;
+}
+
 /* 작은 강조 라벨 */
 .kicker{ color: var(--leaf-dark); font-weight:700; letter-spacing:.02em; }
 
@@ -101,14 +108,13 @@
 
 /* 유저/봇 말풍선 */
 .bubble-user{
-  background: var(--leaf);
-  color: #fff;
+  background: #F4F4F4;
+  color: #363636;
 }
 .bubble-bot{
-  background: #F0F8F0;
-  color: #2C3E2C;
-  border: 1px solid var(--border);
-}
+  background: #F0F9F0;
+  color: #1F2937;
+} 
 
 /* 링크/브랜드 텍스트 */
 .brand-text{ color: var(--leaf-dark); }
@@ -166,23 +172,13 @@
 
 /* 타이틀용 진한 색 */
 .text-title-strong {
-  color: #229954;  /* 어두운 초록 */
+  color: #000000;  /* 검정색 */
 }
 
-/* 혜택칩 그린 계열 */
+/* 혜택칩 그레이 계열 */
 .chip--benefit-brown {
-  background: #10B981;   /* 에메랄드 그린 */
-  color: #fff;           
-  border: 1px solid #059669;
+  background: #ffffff;
+  color: #000000;           
+  border: 1px solid #c6cecb;
 }
 
-/* 특정 혜택별 색상 */
-.chip--accommodation {
-  background: #10B981 !important;   /* 에메랄드 그린 - 숙박 */
-  border: 1px solid #0D9488 !important;
-}
-
-.chip--meal {
-  background: #059669 !important;   /* 진한 그린 - 식사 */
-  border: 1px solid #047857 !important;
-}

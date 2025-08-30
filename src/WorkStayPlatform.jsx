@@ -25,6 +25,8 @@ const getWarmSkinClass = (exp = {}) => {
   return 'skin-butter';
 };
 
+
+
 /** 평균 평점 계산 */
 const getAverageRating = (reviews = []) => {
   if (!reviews.length) return 0;
@@ -620,9 +622,11 @@ const WorkStayPlatform = () => {
                       <div className="space-y-3">
                         <div className="flex items-start justify-between">
                           <h3 className="text-sm font-semibold text-title-strong truncate flex-1">{exp.title}</h3>
-                          <span className="chip chip--type text-xs font-medium whitespace-nowrap ml-2">
-                            {exp.type}
-                          </span>
+                          {exp.type === '기간제' && (
+                            <span className="chip chip--period text-xs font-medium whitespace-nowrap ml-2">
+                              {exp.type}
+                            </span>
+                          )}
                         </div>
 
                         {/* 2줄 말줄임 */}
@@ -643,6 +647,7 @@ const WorkStayPlatform = () => {
                             let chipClass = "chip chip--benefit-brown";
                             if (b === "숙박") chipClass += " chip--accommodation";
                             if (b === "식사") chipClass += " chip--meal";
+                            if (b === "체험") chipClass += " chip--experience";
                             return (
                               <span key={idx} className={chipClass}>{b}</span>
                             );
@@ -732,9 +737,11 @@ const WorkStayPlatform = () => {
                   ))}
                 </div>
               </div>
-              <span className="chip chip--type text-xs font-medium whitespace-nowrap">
-                {selected.type}
-              </span>
+              {selected.type === '기간제' && (
+                <span className="chip chip--period text-xs font-medium whitespace-nowrap">
+                  {selected.type}
+                </span>
+              )}
             </div>
 
             <p className="text-gray-700">{selected.description}</p>

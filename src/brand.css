@@ -1,64 +1,154 @@
-/* src/brand.css  — 로고 팔레트 */
+/* src/brand.css — Warm Green-Yellow Theme */
 :root{
-    --brand:        #2F86E6;  /* 메인 블루 */
-    --brand-dark:   #1E6FD0;
-    --mint:         #49C5B6;  /* 민트/초록 들판 */
-    --mint-dark:    #2AA999;
-    --sky-50:       #EEF6FF;  /* 배경 하이라이트 */
-    --sky-100:      #E6F1FF;
-    --sun:          #F6D072;  /* 노란 들판 */
-    --ink:          #0E2B4A;
-  }
-  
-  /* 부드러운 그라데이션 배경 */
-  .page-bg{
-    background:
-      radial-gradient(1200px 800px at 90% -10%, rgba(73,197,182,.18), transparent 60%),
-      radial-gradient(1000px 600px at -10% 20%, rgba(47,134,230,.16), transparent 55%),
-      linear-gradient(180deg, var(--sky-50), #fff 60%, var(--sky-100));
-  }
-  
-  /* 글래스 헤더 */
-  .header-glass{
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,.70);
-    border-bottom: 1px solid rgba(47,134,230,.15);
-  }
-  
-  /* 카드 */
-  .card{
-    border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 3px 10px rgba(16,60,110,.06);
-    transition: box-shadow .2s, transform .2s;
-  }
-  .card--hover:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16,60,110,.12); }
-  
-  /* 버튼 */
-  .btn-primary{
-    background: linear-gradient(135deg, var(--brand) 0%, var(--mint) 100%);
-    color: #fff; border-radius: 12px; padding: .75rem 1rem; font-weight: 700;
-    box-shadow: 0 6px 16px rgba(47,134,230,.25);
-  }
-  .btn-primary:hover{ filter: brightness(1.03); }
-  .btn-outline{
-    border: 2px solid rgba(47,134,230,.35);
-    border-radius: 12px; color: var(--ink); padding: .75rem 1rem; font-weight: 700;
-    background: #fff;
-  }
-  .btn-outline:hover{ background: rgba(238,246,255,.6); }
-  
-  /* 칩(태그/혜택/배지) */
-  .chip{ font-size: 12px; padding: .25rem .5rem; border-radius: 999px; border:1px solid transparent; }
-  .chip--type{ background:#EAF6F4; color:#0F6B62; border-color:#C7EAE5; }
-  .chip--benefit{ background:#EAF3FF; color:#206BBE; border-color:#CFE5FF; }
-  .chip--ai{
-    background:rgba(120,94,255,.08); color:#5E57C8; border-color:rgba(120,94,255,.22);
-  }
-  
-  /* 작은 강조 라벨 */
-  .kicker{ color: var(--brand-dark); font-weight:700; letter-spacing:.02em; }
-  
-  /* 지도 프레임 보더 컬러 */
-  .map-frame{ border: 1px solid rgba(47,134,230,.25) !important; border-radius: 12px; }
-  
+  /* Brand tokens (warm, friendly) */
+  --leaf:        #52C41A;  /* 연두 메인 */
+  --leaf-dark:   #3AA30E;
+  --field:       #FADB14;  /* 들판 노랑 */
+  --field-dark:  #E7B800;
+  --cream-50:    #FFFBEA;  /* 따뜻한 배경 하이라이트 */
+  --cream-100:   #FFF6D5;
+  --sage-50:     #F2FBEF;  /* 연두빛 배경 하이라이트 */
+  --ink:         #153016;  /* 짙은 녹색 계열 텍스트 */
+
+  /* Components derived */
+  --surface:     #FFFFFF;
+  --border:      rgba(82,196,26,.25);
+  --shadow:      rgba(82,196,26,.10);
+  --shadow-strong: rgba(82,196,26,.18);
+
+  /* Chat / badges */
+  --chip-green-bg:  #EEF9E8;
+  --chip-green-fg:  #1B7D12;
+  --chip-green-br:  #CDEFC4;
+  --chip-yellow-bg: #FFFAE6;
+  --chip-yellow-fg: #7A5A00;
+  --chip-yellow-br: #FFE6A6;
+  --chip-ai-bg:     rgba(160,120,0,.08);
+  --chip-ai-fg:     #8A6C00;
+  --chip-ai-br:     rgba(160,120,0,.22);
+}
+
+/* 부드러운 그라데이션 배경 (연두 ↔ 크림) */
+.page-bg{
+  background:
+    radial-gradient(800px 600px at 10% 20%, rgba(250,219,20,.25), transparent 60%),
+    radial-gradient(1000px 700px at 90% 80%, rgba(82,196,26,.25), transparent 65%),
+    linear-gradient(90deg, #FFF4B3 0%, #E8FFB5 50%, #D6F6A1 100%);
+}
+
+/* 글래스 헤더 (따뜻한 톤) */
+.header-glass{
+  backdrop-filter: blur(10px);
+  background: 
+    radial-gradient(800px 600px at 10% 20%, rgba(250,219,20,.25), transparent 60%),
+    radial-gradient(1000px 700px at 90% 80%, rgba(82,196,26,.25), transparent 65%),
+    linear-gradient(90deg, #FFF4B3 0%, #E8FFB5 50%, #D6F6A1 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+/* 카드 */
+.card{
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 3px 10px var(--shadow);
+  transition: box-shadow .2s, transform .2s;
+}
+.card--hover:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px var(--shadow-strong);
+}
+
+/* 버튼 */
+.btn-primary{
+  background: linear-gradient(135deg, var(--leaf) 0%, var(--field) 100%);
+  color: #fff;
+  border-radius: 12px; padding: .75rem 1rem; font-weight: 700;
+  box-shadow: 0 6px 16px rgba(250,219,20,.25);
+  border: none;
+}
+.btn-primary:hover{ filter: brightness(1.04); }
+.btn-outline{
+  border: 2px solid var(--border);
+  border-radius: 12px; color: var(--ink); padding: .75rem 1rem; font-weight: 700;
+  background: var(--surface);
+}
+.btn-outline:hover{ background: #FAFDF7; }
+
+/* 칩(태그/혜택/배지) */
+.chip{ font-size: 12px; padding: .25rem .5rem; border-radius: 999px; border:1px solid transparent; }
+.chip--type{ background: var(--chip-green-bg); color: var(--chip-green-fg); border-color: var(--chip-green-br); }
+.chip--benefit{ background: var(--chip-yellow-bg); color: var(--chip-yellow-fg); border-color: var(--chip-yellow-br); }
+.chip--ai{ background: var(--chip-ai-bg); color: var(--chip-ai-fg); border-color: var(--chip-ai-br); }
+
+/* 작은 강조 라벨 */
+.kicker{ color: var(--leaf-dark); font-weight:700; letter-spacing:.02em; }
+
+/* 지도 프레임 */
+.map-frame{ border: 1px solid var(--border) !important; border-radius: 12px; }
+
+/* 유저/봇 말풍선 */
+.bubble-user{
+  background: linear-gradient(135deg, var(--leaf) 0%, var(--field) 100%);
+  color: #fff;
+}
+.bubble-bot{
+  background: #F6FBEF;
+  color: #1A2B18;
+  border: 1px solid var(--border);
+}
+
+/* 링크/브랜드 텍스트 */
+.brand-text{ color: var(--leaf-dark); }
+
+/* ===== Warm card skins for experiences ===== */
+:root{
+  --peach-50:#FFF7EC;   --peach-100:#FFE9D1; --peach-200:#FFD3A8;
+  --butter-50:#FFFBE8;  --butter-100:#FFF2B8;
+  --pear-50:#F7FFE9;    --pear-100:#E7F7C8;
+  --rose-50:#FFF1F0;    --rose-100:#FFD9D6;
+  --clay-200: rgba(160,120,60,.18);
+}
+
+/* 공통 카드 스킨: 은은한 그라데이션 + 보더 컬러 */
+.card-skin{
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.card-skin::after{
+  content:"";
+  position:absolute; inset:-8% -8% auto auto;
+  width:200px; height:200px; border-radius:50%;
+  background: radial-gradient(120px 120px at 70% 30%, rgba(255,255,255,.7), transparent 60%),
+              radial-gradient(100px 100px at 10% 90%, rgba(255,255,255,.35), transparent 60%);
+  pointer-events:none;
+  filter: blur(.5px);
+}
+
+/* 과일/체험 성격에 따른 스킨 */
+.skin-peach{
+  background: linear-gradient(180deg, var(--peach-50), #fff 65%);
+  border-color: rgba(255, 166, 97, .32);
+  box-shadow: 0 3px 10px rgba(255, 166, 97, .14);
+}
+.skin-butter{
+  background: linear-gradient(180deg, var(--butter-50), #fff 65%);
+  border-color: rgba(255, 209, 85, .30);
+  box-shadow: 0 3px 10px rgba(255, 209, 85, .12);
+}
+.skin-pear{
+  background: linear-gradient(180deg, var(--pear-50), #fff 65%);
+  border-color: rgba(153, 199, 89, .28);
+  box-shadow: 0 3px 10px rgba(153, 199, 89, .12);
+}
+.skin-rose{
+  background: linear-gradient(180deg, var(--rose-50), #fff 65%);
+  border-color: rgba(240, 120, 120, .24);
+  box-shadow: 0 3px 10px rgba(240, 120, 120, .10);
+}
+
+/* 호버시 살짝 들어올리는 느낌 유지 */
+.card-skin.card--hover:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(16,60,110,.10), 0 6px 14px var(--clay-200);
+}

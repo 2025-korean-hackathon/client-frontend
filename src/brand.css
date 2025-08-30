@@ -1,42 +1,42 @@
-/* src/brand.css — Warm Green-Yellow Theme */
+/* src/brand.css — Fresh Green-Orange Theme */
 :root{
-  /* Brand tokens (warm, friendly) */
-  --leaf:        #7A5A00;  /* 연두 메인 */
-  --leaf-dark:   #7A5A00;
-  --field:       #f4c55c;  /* 들판 노랑 */
-  --field-dark:  #f4c55c;
-  --cream-50:    #FFFBEA;  /* 따뜻한 배경 하이라이트 */
-  --cream-100:   #FFF6D5;
-  --sage-50:     #F2FBEF;  /* 연두빛 배경 하이라이트 */
-  --ink:         #153016;  /* 짙은 녹색 계열 텍스트 */
+  /* Brand tokens (fresh, modern) */
+  --leaf:        #27AE60;  /* 초록 메인 */
+  --leaf-dark:   #229954;  /* 어두운 초록 */
+  --field:       #F0F8F0;  /* 연한 민트 배경 */
+  --field-dark:  #E8F5E8;  /* 조금 더 어두운 민트 */
+  --cream-50:    #F0F8F0;  /* 연한 민트 하이라이트 */
+  --cream-100:   #E8F5E8;
+  --sage-50:     #F0F8F0;  /* 연한 민트 배경 하이라이트 */
+  --ink:         #2C3E2C;  /* 짙은 녹색 계열 텍스트 */
 
   /* Components derived */
-  --surface:     #FFFFFF;
-  --border:      rgba(82,196,26,.25);
-  --shadow:      rgba(82,196,26,.10);
-  --shadow-strong: rgba(82,196,26,.18);
+  --surface:     #FFFFFF;  /* 카드 배경 화이트 */
+  --border:      rgba(39,174,96,.25);
+  --shadow:      rgba(39,174,96,.10);
+  --shadow-strong: rgba(39,174,96,.18);
 
   /* Chat / badges */
-  --chip-green-bg:  #EEF9E8;
-  --chip-green-fg:  #7A5A00;
-  --chip-green-br:  #CDEFC4;
-  --chip-yellow-bg: #FFFAE6;
-  --chip-yellow-fg: #7A5A00;
-  --chip-yellow-br: #FFE6A6;
-  --chip-ai-bg:     rgba(160,120,0,.08);
-  --chip-ai-fg:     #8A6C00;
-  --chip-ai-br:     rgba(160,120,0,.22);
+  --chip-green-bg:  #E8F5E8;
+  --chip-green-fg:  #27AE60;
+  --chip-green-br:  #D5EBD5;
+  --chip-orange-bg: #FDF2E9;  /* 주황 배경 */
+  --chip-orange-fg: #E67E22;  /* 주황 텍스트 */
+  --chip-orange-br: #F5C6A0;  /* 주황 테두리 */
+  --chip-ai-bg:     rgba(39,174,96,.08);
+  --chip-ai-fg:     #27AE60;
+  --chip-ai-br:     rgba(39,174,96,.22);
 }
 
 /* 단색 배경 */
 .page-bg{
-  background: #f4c55c; /* field color */
+  background: #FFFFFF; /* 흰색 배경 */
 }
 
 /* 글래스 헤더 */
 .header-glass{
   backdrop-filter: blur(10px);
-  background: #f4c55c;
+  background: #FFFFFF; /* 흰색 배경 */
 }
 
 
@@ -44,7 +44,7 @@
   font-family: 'BMJUA','GmarketSansBold','Pretendard','sans-serif';
   font-weight: 700;
   font-size: 1.25rem;
-  color: #5A3A00; /* 다크 브라운 */
+  color: #229954; /* 어두운 초록 */
   letter-spacing: .02em;
 }
 
@@ -65,7 +65,7 @@
   background: var(--leaf);
   color: #fff;
   border-radius: 12px; padding: .75rem 1rem; font-weight: 700;
-  box-shadow: 0 6px 16px rgba(250,219,20,.25);
+  box-shadow: 0 6px 16px rgba(39,174,96,.25);
   border: none;
 }
 .btn-primary:hover{ filter: brightness(1.04); }
@@ -75,12 +75,12 @@
   border-radius: 12px; color: var(--ink); padding: .75rem 1rem; font-weight: 700;
   background: var(--surface);
 }
-.btn-outline:hover{ background: #FAFDF7; }
+.btn-outline:hover{ background: #F0F8F0; }
 
 /* 칩(태그/혜택/배지) */
 .chip{ font-size: 12px; padding: .25rem .5rem; border-radius: 999px; border:1px solid transparent; }
 .chip--type{ background: var(--chip-green-bg); color: var(--chip-green-fg); border-color: var(--chip-green-br); }
-.chip--benefit{ background: var(--chip-yellow-bg); color: var(--chip-yellow-fg); border-color: var(--chip-yellow-br); }
+.chip--benefit{ background: var(--chip-orange-bg); color: var(--chip-orange-fg); border-color: var(--chip-orange-br); }
 .chip--ai{ background: var(--chip-ai-bg); color: var(--chip-ai-fg); border-color: var(--chip-ai-br); }
 
 /* 작은 강조 라벨 */
@@ -95,8 +95,8 @@
   color: #fff;
 }
 .bubble-bot{
-  background: #F6FBEF;
-  color: #1A2B18;
+  background: #F0F8F0;
+  color: #2C3E2C;
   border: 1px solid var(--border);
 }
 
@@ -156,12 +156,12 @@
 
 /* 타이틀용 진한 색 */
 .text-title-strong {
-  color: #5A3A00;  /* 다크 브라운 */
+  color: #229954;  /* 어두운 초록 */
 }
 
-/* 혜택칩 연갈색 */
+/* 혜택칩 주황색 */
 .chip--benefit-brown {
-  background: #B87333;   /* 따뜻한 구리색 계열 */
+  background: #E67E22;   /* 주황 포인트 컬러 */
   color: #fff;           
-  border: 1px solid #9c5f28;
+  border: 1px solid #D35400;
 }

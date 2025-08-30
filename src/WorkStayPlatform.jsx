@@ -25,6 +25,59 @@ const getWarmSkinClass = (exp = {}) => {
   return 'skin-butter';
 };
 
+// 체험 타입별 이미지/이모지 반환
+const getExperienceImage = (exp = {}) => {
+  // ID별 실제 이미지 매핑 (1~6번 이미지)
+  if (exp.id === 1) return '/1.png';  // 대전 식물원 가드닝 체험
+  if (exp.id === 2) return '/2.png';  // 천안 배 농장 수확 체험  
+  if (exp.id === 3) return '/3.png';  // 청주 딸기 농장 체험
+  if (exp.id === 4) return '/4.png';  // 부산 해안가 염전 체험
+  if (exp.id === 5) return '/5.png';  // 제주 감귤밭 일손돕기
+  if (exp.id === 6) return '/6.png';  // 강원도 산나물 채취 체험
+
+  const t = `${exp.title || ''} ${exp.description || ''} ${(exp.tags || []).join(' ')}`;
+
+  // 과일별 이미지
+  if (/사과/.test(t)) return '🍎';
+  if (/배/.test(t)) return '🍐';
+  if (/복숭아|살구/.test(t)) return '🍑';
+  if (/포도/.test(t)) return '🍇';
+  if (/딸기/.test(t)) return '🍓';
+  if (/감귤|오렌지|귤/.test(t)) return '🍊';
+  if (/수박/.test(t)) return '🍉';
+  if (/참외|멜론/.test(t)) return '🍈';
+  if (/체리/.test(t)) return '🍒';
+  if (/밤/.test(t)) return '🌰';
+
+  // 채소별 이미지
+  if (/배추|양배추/.test(t)) return '🥬';
+  if (/무|당근/.test(t)) return '🥕';
+  if (/감자/.test(t)) return '🥔';
+  if (/고구마/.test(t)) return '🍠';
+  if (/옥수수/.test(t)) return '🌽';
+  if (/토마토/.test(t)) return '🍅';
+  if (/고추/.test(t)) return '🌶️';
+  if (/마늘|양파/.test(t)) return '🧄';
+
+  // 곡물/기타
+  if (/벼|쌀|논/.test(t)) return '🌾';
+  if (/콩/.test(t)) return '🫘';
+
+  // 작업별 이미지
+  if (/심기|파종/.test(t)) return '🌱';
+  if (/수확|따기/.test(t)) return '🚜';
+  if (/김매기|제초/.test(t)) return '🌿';
+  if (/과수원|나무/.test(t)) return '🌳';
+
+  // 태그 기반
+  if ((exp.tags || []).includes('과일')) return '🍎';
+  if ((exp.tags || []).includes('힐링')) return '🌸';
+  if ((exp.tags || []).includes('체험')) return '🌾';
+
+  // 기본값
+  return '🌾';
+};
+
 
 
 /** 평균 평점 계산 */
@@ -284,7 +337,6 @@ const WorkStayPlatform = () => {
           type: '기간제',
           tags: ['과일', '수확', '체험', '힐링'],
           benefits: ['간식제공', '교통지원'],
-          image: '🍑',
           description: '달콤한 복숭아 수확 보조. 초보 가능, 사진 스팟 많아요!',
           distance: '1시간 10분',
           transportSupport: true,
@@ -303,7 +355,6 @@ const WorkStayPlatform = () => {
           type: '기간제',
           tags: ['과일', '수확', '체험'],
           benefits: ['포도시식', '지역화폐'],
-          image: '🍇',
           description: '머루·캠벨 포도 수확 및 포장 보조. 그늘 많아 한여름에도 덜 덥습니다.',
           distance: '1시간 40분',
           transportSupport: false,
@@ -322,7 +373,6 @@ const WorkStayPlatform = () => {
           type: '기간제',
           tags: ['과일', '수확', '체험'],
           benefits: ['중식제공'],
-          image: '🍐',
           description: '배 봉지 씌우기·수확 보조. 숙련도 필요 없음, 팀 활동 위주.',
           distance: '2시간 10분',
           transportSupport: false,
@@ -331,7 +381,7 @@ const WorkStayPlatform = () => {
             { author: '준호', rating: 5, date: '2025-09-01', content: '팀으로 하니 금방 끝나고 재밌었어요.' },
           ],
         },
-        {
+{
           id: 9004,
           title: '충남 공주 밤밭 함께해요',
           region: '충남 공주',
@@ -341,7 +391,6 @@ const WorkStayPlatform = () => {
           type: '기간제',
           tags: ['과일', '수확', '체험', '힐링'],
           benefits: ['교통지원'],
-          image: '🌰',
           description: '밤 줍기·선별 보조. 숲길 산책 가능, 힐링 코스 강추.',
           distance: '1시간 50분',
           transportSupport: true,
@@ -350,11 +399,73 @@ const WorkStayPlatform = () => {
             { author: '현수', rating: 4, date: '2025-10-05', content: '공기 너무 좋고 밤도 실했어요.' },
           ],
         },
+        {
+          id: 9005,
+          title: '대전 식물원 가드닝 체험',
+          region: '대전',
+          duration: '반일',
+          participants: '4-8명',
+          period: '연중',
+          type: '상시',
+          tags: ['식물', '가드닝', '체험', '힐링'],
+          benefits: ['간식제공', '교통지원'],
+          description: '온실에서 다양한 식물들과 함께하는 가드닝 체험. 실내 활동으로 날씨에 구애받지 않아요!',
+          distance: '45분',
+          transportSupport: true,
+          location: '대전광역시 서구 만년동 식물원길 42',
+          reviews: [
+            { author: '민지', rating: 5, date: '2025-01-15', content: '온실이 따뜻하고 식물들이 정말 예뻐요!' },
+            { author: '성호', rating: 4, date: '2025-01-20', content: '힐링되는 시간이었습니다.' },
+          ],
+          image: '🌿',
+        },
+        {
+          id: 9006,
+          title: '천안 배 농장 수확 체험',
+          region: '천안',
+          duration: '당일',
+          participants: '3-6명',
+          period: '8~10월',
+          type: '기간제',
+          tags: ['과일', '수확', '체험'],
+          benefits: ['중식제공', '과일지급'],
+          description: '달콤한 천안 배 수확 체험! 신선한 배를 직접 따보고 가져갈 수 있어요.',
+          distance: '1시간 20분',
+          transportSupport: false,
+          location: '충청남도 천안시 동남구 배밭로 123',
+          reviews: [
+            { author: '지영', rating: 5, date: '2025-09-10', content: '배가 정말 크고 달아요!' },
+            { author: '태민', rating: 4, date: '2025-09-15', content: '가족과 함께 즐거운 시간이었어요.' },
+          ],
+          image: '🍐',
+        },
+        {
+          id: 9007,
+          title: '청주 딸기 농장 체험',
+          region: '청주',
+          duration: '반일',
+          participants: '2-5명',
+          period: '12~5월',
+          type: '기간제',
+          tags: ['과일', '수확', '체험', '딸기'],
+          benefits: ['딸기시식', '딸기가져가기'],
+          description: '싱싱한 딸기를 직접 따보고 맛볼 수 있는 특별한 체험! 아이들과 함께 오기 좋아요.',
+          distance: '1시간 10분',
+          transportSupport: true,
+          location: '충청북도 청주시 서원구 딸기밭로 56',
+          reviews: [
+            { author: '수정', rating: 5, date: '2025-02-20', content: '딸기가 너무 달고 싱싱해요!' },
+            { author: '준석', rating: 5, date: '2025-03-05', content: '아이가 너무 좋아했어요.' },
+          ],
+          image: '🍓',
+        },
       ];
 
-      // 2) 과일 체험만(안전) 필터링 후, 고정 경로 순서로 정렬
-      const ONLY = demoExperiences.filter(isFruitPicking);
-      const ROUTE_ORDER = [9001, 9002, 9003, 9004];
+      // 2) 모든 체험 포함 (과일 체험 + 대전/천안/청주 지역 체험)
+      const ONLY = demoExperiences.filter(exp => 
+        isFruitPicking(exp) || ['대전', '천안', '청주'].includes(exp.region)
+      );
+      const ROUTE_ORDER = [9001, 9002, 9003, 9004, 9005, 9006, 9007];
       const result = [...ONLY].sort(
         (a, b) => ROUTE_ORDER.indexOf(a.id) - ROUTE_ORDER.indexOf(b.id)
       );
@@ -579,7 +690,7 @@ const WorkStayPlatform = () => {
               <div className="card p-4">
                 <div className="flex items-center space-x-3 mb-3">
                   <Filter className="w-4 h-4 brand-text" />
-                  <h3 className="text-md font-semibold">체험 필터</h3>
+                  <h3 className="text-md font-semibold">알바 필터</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
@@ -611,53 +722,134 @@ const WorkStayPlatform = () => {
                   농촌 체험 ({filteredExperiences.length}개)
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {filteredExperiences.map((exp) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredExperiences.map((exp, index) => (
                        <div
                          key={exp.id}
-                         className={`card card--hover card-skin ${getWarmSkinClass(exp)} p-4 cursor-pointer`}
+                         className={`card card--hover card-skin ${getWarmSkinClass(exp)} p-0 cursor-pointer group experience-card`}
                          onClick={() => openDetail(exp)}
+                         style={{ animationDelay: `${index * 0.1}s` }}
                        >
-
-                      <div className="space-y-3">
-                        <div className="flex items-start justify-between">
-                          <h3 className="text-sm font-semibold text-title-strong truncate flex-1">{exp.title}</h3>
+                      {/* 카드 상단 이미지 영역 */}
+                      <div className="relative h-32 overflow-hidden rounded-t-2xl">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+                        
+                                            {/* 메인 이미지 */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      {getExperienceImage(exp).startsWith('/') ? (
+                        <img 
+                          src={getExperienceImage(exp)} 
+                          alt={exp.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      ) : (
+                        <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
+                          {getExperienceImage(exp)}
+                        </div>
+                      )}
+                    </div>
+                        
+                        {/* 배경 패턴 */}
+                        <div className="absolute inset-0 bg-pattern"></div>
+                        
+                        {/* 기간제 태그 */}
+                        <div className="absolute top-3 right-3 z-10">
                           {exp.type === '기간제' && (
-                            <span className="chip chip--period text-xs font-medium whitespace-nowrap ml-2">
+                            <span className="chip chip--period text-xs font-bold pulse-badge shadow-lg">
                               {exp.type}
                             </span>
                           )}
                         </div>
+                        
+                        {/* 하단 그라데이션 오버레이 */}
+                        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black/10 to-transparent"></div>
+                      </div>
 
-                        {/* 2줄 말줄임 */}
+                      <div className="p-5 space-y-4">
+                        {/* 헤더 섹션 */}
+                        <div className="space-y-2">
+                          <h3 className="text-lg font-bold text-title-strong leading-tight group-hover:text-green-700 transition-colors duration-300">
+                            {exp.title}
+                          </h3>
+                          <div className="flex items-center gap-3 text-sm">
+                            <div className="flex items-center gap-1 text-gray-600">
+                              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                              <span>{exp.region}</span>
+                            </div>
+                            <div className="flex items-center gap-1 text-gray-600">
+                              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                              <span>{exp.duration}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* 설명 */}
                         <p
-                          className="text-gray-600 text-xs"
-                          style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                          className="text-gray-700 text-sm leading-relaxed font-normal"
+                          style={{ 
+                            display: '-webkit-box', 
+                            WebkitLineClamp: 2, 
+                            WebkitBoxOrient: 'vertical', 
+                            overflow: 'hidden',
+                            minHeight: '2.5rem'
+                          }}
                         >
                           {exp.description}
                         </p>
 
-                        <div className="space-y-1 text-xs text-gray-600">
-                          <div>{exp.region} · {exp.duration}</div>
-                          <div>위치: {exp.location || '미정'}</div>
+                        {/* 위치 & 기간 정보 */}
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-xs text-gray-600 bg-gray-50/50 rounded-lg px-3 py-2">
+                            <svg className="w-3 h-3 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                            </svg>
+                            <span className="truncate">{exp.location || '위치 미정'}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-gray-600 bg-gray-50/50 rounded-lg px-3 py-2">
+                            <svg className="w-3 h-3 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                            </svg>
+                            <span className="truncate">{exp.period}</span>
+                          </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-1">
-                          {(exp.benefits || []).slice(0, 2).map((b, idx) => {
-                            let chipClass = "chip chip--benefit-brown";
+                        {/* 혜택 태그 */}
+                        <div className="flex flex-wrap gap-1.5">
+                          {(exp.benefits || []).slice(0, 3).map((b, idx) => {
+                            let chipClass = "chip chip--benefit-brown transition-all duration-200 hover:scale-105";
                             if (b === "숙박") chipClass += " chip--accommodation";
                             if (b === "식사") chipClass += " chip--meal";
                             if (b === "체험") chipClass += " chip--experience";
                             return (
-                              <span key={idx} className={chipClass}>{b}</span>
+                              <span key={idx} className={`${chipClass} text-xs font-medium shadow-sm`}>
+                                {b}
+                              </span>
                             );
                           })}
-                          {(exp.benefits || []).length > 2 && (
-                            <span className="text-xs text-gray-500">+{exp.benefits.length - 2}</span>
+                          {(exp.benefits || []).length > 3 && (
+                            <span className="text-xs text-gray-500 bg-gray-100/80 px-2 py-1 rounded-full border border-gray-200">
+                              +{exp.benefits.length - 3}
+                            </span>
                           )}
                         </div>
 
-                        <div className="text-xs text-gray-500">{exp.period}</div>
+                        {/* 하단 정보 */}
+                        <div className="flex items-center justify-between pt-2 border-t border-gray-100">
+                          <div className="flex items-center gap-2">
+                            {exp.transportSupport && (
+                              <div className="flex items-center gap-1 text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full border border-green-200">
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                  <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H14a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 100-2 1 1 0 000 2z"/>
+                                </svg>
+                                <span>교통지원</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-600 transition-colors">
+                            자세히 보기 →
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -724,10 +916,38 @@ const WorkStayPlatform = () => {
 
       {currentPage === 'detail' && selected && (
         <div className="max-w-5xl mx-auto px-4 py-6">
-          <div className={`card card-skin ${getWarmSkinClass(selected)} p-6 space-y-6`}>
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">{selected.title}</h2>
+          <div className={`card card-skin ${getWarmSkinClass(selected)} p-0 space-y-6 overflow-hidden`}>
+            {/* 상단 이미지 헤더 */}
+            <div className="relative h-48 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent"></div>
+                              <div className="absolute inset-0 flex items-center justify-center">
+                  {getExperienceImage(selected).startsWith('/') ? (
+                    <img 
+                      src={getExperienceImage(selected)} 
+                      alt={selected.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-8xl opacity-90">
+                      {getExperienceImage(selected)}
+                    </div>
+                  )}
+                </div>
+              <div className="absolute inset-0 bg-pattern"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
+              {selected.type === '기간제' && (
+                <div className="absolute top-4 right-4">
+                  <span className="chip chip--period text-sm font-bold pulse-badge shadow-lg">
+                    {selected.type}
+                  </span>
+                </div>
+              )}
+            </div>
+            
+            <div className="p-6 space-y-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">{selected.title}</h2>
                 <div className="text-sm text-gray-600 mt-1">
                   {selected.region} · {selected.duration} · 인원 {selected.participants || '정보 없음'}
                 </div>
@@ -737,11 +957,6 @@ const WorkStayPlatform = () => {
                   ))}
                 </div>
               </div>
-              {selected.type === '기간제' && (
-                <span className="chip chip--period text-xs font-medium whitespace-nowrap">
-                  {selected.type}
-                </span>
-              )}
             </div>
 
             <p className="text-gray-700">{selected.description}</p>
@@ -859,6 +1074,7 @@ const WorkStayPlatform = () => {
               >
                 목록으로
               </button>
+            </div>
             </div>
           </div>
         </div>

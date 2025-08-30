@@ -887,7 +887,6 @@ const WorkStayPlatform = () => {
                   value={loginData.password}
                   onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg"
-                  placeholder="workplay.01"
                   onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
                 />
               </div>
